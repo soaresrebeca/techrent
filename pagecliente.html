@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechRent Brasil | Área do Cliente</title>
+        <link rel="stylesheet" href="./styles/techrent.css">
+    </head>
+    <body>
+    <header class="navbar">
+        <h1>TechRent Brasil</h1>
+        <nav>
+            <a href="pagecliente.html" class="ativo">Início</a>
+            <a href="minhas-reservas.html">Minhas Reservas</a>
+            <a href="minhaconta.html">Conta</a>
+            <a href="#" onclick="sair()">Sair</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div><h2>Painel do Cliente</h2>
+                <p>Gerencie suas solicitações de locação e acompanhe o andamento das reservas em um único lugar.</p>
+            </div><button onclick="abrirModalChamado()">+ Nova Reserva</button>
+        </section>
+
+    <section class="resumo-dashboard">
+        <div class="card-resumo">
+            <h3>Pendentes</h3>
+            <span id="resumo-pendentes">0</span>
+        </div>
+
+        <div class="card-resumo">
+            <h3>Aprovadas</h3>
+            <span id="resumo-aprovadas">0</span>
+        </div>
+
+        <div class="card-resumo">
+            <h3>Recusadas</h3>
+            <span id="resumo-recusadas">0</span>
+        </div>
+    </section>
+
+    <!-- <section class="secao">
+        <h2>Equipamentos</h2>
+        <div class="cards-tecnicos" id="lista-equipamentos"></div>
+    </section> -->
+
+    </main>
+
+    <div id="modal-chamado" role="dialog" aria-modal="true">
+        <div class="chamado-content">
+            <button class="fechar-chamado" onclick="fecharModalChamado()" aria-label="Fechar">×</button>
+            <h2>Nova Reserva</h2>
+            <p>Preencha os dados abaixo para solicitar a locação de um equipamento.</p>
+            <input type="text" id="titulo-chamado" placeholder="Título da reserva">
+
+            <div id="container-categoria">
+                <select id="categoria-chamado">
+                    <option value="">Selecione o equipamento</option>
+                    <option value="Notebook">Notebook</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Monitor">Monitor</option>
+                    <option value="Impressora">Impressora</option>
+                    <option value="Projetor">Projetor</option>
+                    <option value="Tablet">Tablet</option>
+                </select>
+            </div>
+
+            <label for="data-retirada">Data de Retirada</label>
+            <input type="date" id="data-retirada">
+            <label for="data-devolucao">Data de Devolução</label>
+            <input type="date" id="data-devolucao">
+
+            <textarea id="descricao-chamado" placeholder="Informe observações ou detalhes da locação:"></textarea>
+            <button onclick="CriarChamado()">Solicitar reserva</button>
+        </div>
+    </div>
+
+    <div id="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <h3>Atenção</h3>
+            <p id="mensagem-modal"></p>
+            <button onclick="fecharModal()">OK</button>
+        </div>
+    </div>
+
+    <script>window.addEventListener("load",()=>document.body.classList.add("loaded"));</script>
+    <script src="script.js"></script>
+
+    </body>
+</html>

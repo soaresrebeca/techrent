@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechRent Brasil | Conta do Funcionário</title>
+        <link rel="stylesheet" href="./styles/techrent.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <h1>TechRent Brasil</h1>
+            <nav>
+                <a href="pagefuncionario.html">Início</a>
+                <a href="gerenciar-reservas-funcionario.html">Reservas</a>
+                <a href="conta-funcionario.html" class="ativo">Conta</a>
+                <a href="#" onclick="sair()">Sair</a>
+            </nav>
+        </header>
+
+        <section class="minha-conta">
+            <h2>Conta do Funcionário</h2>
+            <p>Visualize os dados cadastrados da sua conta.</p>
+            <hr>
+            <div id="dados-conta"></div>
+        </section>
+        
+        <script>window.addEventListener("load",()=>document.body.classList.add("loaded"));</script>
+        <script src="script.js"></script>
+    </body>
+</html>

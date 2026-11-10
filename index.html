@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechRent Brasil | Locação de Equipamentos de TI</title>
+        <link rel="stylesheet" href="./styles/techrent.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <h1>TechRent Brasil</h1>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="pagelogin.html">Entrar</a>
+                <a href="pagecadastro.html" class="btn-cadastro">Criar Conta</a>
+            </nav>
+        </header>
+
+        <section class="landing-hero">
+            <h2>Gestão de locação de equipamentos de TI, em um só lugar</h2>
+            <p>Centralize usuários, reservas e operações de locação em uma plataforma moderna, segura e intuitiva.</p>
+
+            <div class="hero-buttons">
+                <a href="pagelogin.html" class="btn btn-primary">Entrar</a>
+                <a href="pagecadastro.html" class="btn btn-secondary">Criar Conta</a>
+            </div>
+        </section>
+
+            <!-- SOBRE -->
+        <section id="sobre" class="section sobre">
+            <div>
+                <span class="eyebrow">Sobre a plataforma</span>
+                <h2>Do pedido à devolução, tudo no mesmo lugar</h2>
+                <p>
+                    A TechRent Brasil substitui planilhas e registros manuais por um
+                    sistema web que acompanha todo o ciclo da locação de equipamentos
+                    de TI: reserva, aprovação, retirada e devolução.
+                </p>
+
+                <ul class="checklist">
+                    <li>Reservas com data de retirada e de devolução</li>
+                    <li>Aprovação e recusa pela equipe responsável</li>
+                    <li>Status do equipamento sempre atualizado</li>
+                    <li>Painel próprio para cada perfil de acesso</li>
+                </ul>
+
+                <a href="pagecadastro.html" class="btn">Começar agora</a>
+            </div>
+
+            <div class="sobre-visual" aria-hidden="true">
+                <div class="mock-linha">
+                    <div>
+                        <strong>Notebook Dell Latitude 5420</strong>
+                        <small>Retirada 10/11 · Devolução 14/11</small>
+                    </div>
+                    <span class="badge warn">Pendente</span>
+                </div>
+                <div class="mock-linha">
+                    <div>
+                        <strong>Projetor Epson X39</strong>
+                        <small>Retirada 08/11 · Devolução 12/11</small>
+                    </div>
+                    <span class="badge ok">Aprovada</span>
+                </div>
+                <div class="mock-linha">
+                    <div>
+                        <strong>Monitor LG 24</strong>
+                        <small>Retirada 03/11 · Devolução 07/11</small>
+                    </div>
+                    <span class="badge info">Devolvida</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- NÚMEROS -->
+        <section class="section">
+            <div class="stats">
+                <div class="stat"><span>3</span><p>perfis de acesso</p></div>
+                <div class="stat"><span>4</span><p>status de equipamento</p></div>
+                <div class="stat"><span>1</span><p>painel para toda a operação</p></div>
+                <div class="stat"><span>24h</span><p>acesso pelo navegador</p></div>
+            </div>
+        </section>
+
+        <!-- FUNCIONALIDADES -->
+        <section id="funcionalidades" class="section">
+            <span class="eyebrow">Funcionalidades</span>
+            <h2>Tudo o que a operação precisa</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="icone">📋</div>
+                    <h3>Gestão de Reservas</h3>
+                    <p>Controle completo das solicitações, aprovações e acompanhamento das locações.</p>
+                </div>
+                <div class="card">
+                    <div class="icone">👥</div>
+                    <h3>Gestão de Usuários</h3>
+                    <p>Clientes, funcionários e administradores em um único ambiente.</p>
+                </div>
+                <div class="card">
+                    <div class="icone">🔄</div>
+                    <h3>Controle Operacional</h3>
+                    <p>Registro de retirada, devolução e acompanhamento dos processos de locação.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+        <section class="section">
+            <span class="eyebrow">Como funciona</span>
+            <h2>Quatro passos, do pedido à devolução</h2>
+
+            <ol class="passos">
+                <li><h3>Solicitação</h3><p>O cliente escolhe o equipamento e informa as datas.</p></li>
+                <li><h3>Aprovação</h3><p>A equipe analisa e aprova ou recusa a reserva.</p></li>
+                <li><h3>Retirada</h3><p>O funcionário registra a saída e o equipamento fica como Locado.</p></li>
+                <li><h3>Devolução</h3><p>Ao devolver, o equipamento volta a ficar Disponível.</p></li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <div class="cta">
+                <h2>Pronto para organizar suas locações?</h2>
+                <p>Crie sua conta e faça a primeira reserva em poucos minutos.</p>
+                <div class="hero-buttons">
+                    <a href="pagecadastro.html" class="btn btn-primary">Criar Conta</a>
+                    <a href="pagelogin.html" class="btn btn-secondary">Já tenho conta</a>
+                </div>
+            </div>
+        </section>  
+
+        <footer>
+            <h3>TechRent Brasil</h3>
+            <p>Sistema de Gestão de Locação de Equipamentos de TI</p>
+            <span>© 2026 - Todos os direitos reservados</span>
+        </footer>
+        
+        <script>window.addEventListener("load",()=>document.body.classList.add("loaded"));</script>
+    </body>
+</html>

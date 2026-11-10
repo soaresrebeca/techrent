@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechRent Brasil | Entrar</title>
+        <link rel="stylesheet" href="./styles/techrent.css">
+    </head>
+    <body>
+        <main class="auth">
+            <div class="container-login">
+                <h1>TechRent Brasil</h1>
+                <h2>Sistema de Locação de Equipamentos de TI</h2>
+                <p>Acesse sua conta para gerenciar reservas, contratos, devoluções e equipamentos.</p>
+
+        <form onsubmit="return false">
+            <input type="email" placeholder="Digite seu e-mail" id="email-login" autocomplete="username">
+            <input type="password" placeholder="Digite sua senha" id="senha-login" autocomplete="current-password">
+            <button type="button" onclick="login()">Entrar</button>
+            <p class="texto-cadastro">Ainda não possui cadastro?</p>
+            <a href="pagecadastro.html" class="link-cadastro">Criar Conta</a>
+        </form>
+
+        <p class="versao">Versão 1.0 | TechRent Brasil</p></div>
+    
+    </main>
+
+        <div id="modal" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <h3>Atenção</h3>
+                <p id="mensagem-modal"></p>
+                <button onclick="fecharModal()">OK</button>
+            </div>
+        </div>
+
+        <script>window.addEventListener("load",()=>document.body.classList.add("loaded"));</script>
+        <script src="script.js"></script>
+    </body>
+</html>

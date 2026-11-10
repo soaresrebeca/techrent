@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechRent Brasil | Gerenciar Reservas</title>
+        <link rel="stylesheet" href="./styles/techrent.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <h1>TechRent Brasil</h1>
+            <nav>
+                <a href="pageadmin.html">Início</a>
+                <a href="usuarios.html">Usuários</a>
+                <a href="gerenciar-reservas.html" class="ativo">Reservas</a>
+                <a href="conta-admin.html">Conta</a>
+                <a href="#" onclick="sair()">Sair</a>
+            </nav>
+        </header>
+
+        <main class="container">
+            <section class="tecnicos-section">
+                <h2>Gerenciamento de Reservas</h2>
+                <p class="subtitulo">Visualize e gerencie as solicitações de locação realizadas pelos clientes.</p>
+                <div class="cards-tecnicos" id="lista-reservas">
+                </div>
+            </section>
+        </main>
+
+        <div id="modal" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <h3>Atenção</h3>
+                <p id="mensagem-modal"></p>
+                <button onclick="fecharModal()">OK</button>
+            </div>
+        </div>
+        
+    <script>window.addEventListener("load",()=>document.body.classList.add("loaded"));</script>
+    <script src="script.js"></script>
+    </body>
+</html>

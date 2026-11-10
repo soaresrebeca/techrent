@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechRent Brasil | Painel Administrativo</title>
+        <link rel="stylesheet" href="./styles/techrent.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <h1>TechRent Brasil</h1>
+            <nav>
+                <a href="pageadmin.html" class="ativo">Início</a>
+                <a href="usuarios.html">Usuários</a>
+                <a href="gerenciar-reservas.html">Reservas</a>
+                <a href="conta-admin.html">Conta</a>
+                <a href="#" onclick="sair()">Sair</a>
+            </nav>
+        </header>
+        <main class="container">
+            <section class="hero">
+                <div>
+                    <h2>Painel Administrativo</h2>
+                    <p>Gerencie usuários e equipamentos, consulte relatórios e acompanhe as operações da TechRent Brasil.</p>
+                </div>
+            </section>
+            
+            <section class="dashboard-admin">
+                <div class="card-resumo">
+                    <h3>Usuários</h3>
+                    <span id="total-usuarios">0</span>
+                </div>
+
+                <div class="card-resumo">
+                    <h3>Clientes</h3>
+                    <span id="total-clientes">0</span>
+                </div>
+
+                <div class="card-resumo">
+                    <h3>Funcionários</h3>
+                    <span id="total-funcionarios">0</span>
+                </div>
+                
+                <div class="card-resumo">
+                    <h3>Reservas Pendentes</h3>
+                    <span id="total-pendentes">0</span>
+                </div>
+                
+                <div class="card-resumo">
+                    <h3>Reservas Aprovadas</h3>
+                    <span id="total-aprovadas">0</span>
+                </div>
+                
+                <div class="card-resumo">
+                    <h3>Reservas Devolvidas</h3>
+                    <span id="total-devolvidas">0</span>
+                </div>
+            </section>
+        </main>
+
+        <div id="modal" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <h3>Atenção</h3>
+                <p id="mensagem-modal"></p>
+                <button onclick="fecharModal()">OK</button>
+            </div>
+        </div>
+        
+        <script>window.addEventListener("load",()=>document.body.classList.add("loaded"));</script>
+        <script src="script.js"></script>
+    </body>
+</html>

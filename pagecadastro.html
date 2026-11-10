@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechRent Brasil | Cadastro</title>
+        <link rel="stylesheet" href="./styles/techrent.css">
+    </head>
+    <body>
+        <main class="auth">
+            <div class="container-login">
+                <h1>TechRent Brasil</h1>
+                <p>Crie sua conta para acessar o sistema de locação de equipamentos de TI.</p>
+
+            <form onsubmit="return false">
+                <input type="text" placeholder="Nome completo" id="nome-cadastro">
+                <input type="email" placeholder="E-mail" id="email-cadastro">
+                <input type="text" placeholder="Telefone" id="telefone-cadastro">
+                <input type="text" placeholder="CPF" id="cpf-cadastro"><input type="password" placeholder="Senha" id="senha-cadastro">
+                <input type="password" placeholder="Confirmar senha" id="confirmar-senha-cadastro">
+
+                <select id="tipo-usuario" required><option value="">Selecione o perfil de acesso</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="funcionario">Funcionário</option>
+                    <option value="admin">Administrador</option></select>
+
+                <button type="button" onclick="cadastrar()">Cadastrar</button>
+                <a href="pagelogin.html"><p>Já possui uma conta? Faça login</p></a>
+            </form>
+            </div>
+        </main>
+
+        <div id="modal" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <h3>Atenção</h3>
+                <p id="mensagem-modal"></p>
+                <button onclick="fecharModal()">OK</button>
+            </div>
+        </div>
+
+        <script>window.addEventListener("load",()=>document.body.classList.add("loaded"));</script>
+        <script src="script.js"></script>
+
+    </body>
+</html>

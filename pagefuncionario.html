@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechRent Brasil | Área do Funcionário</title>
+        <link rel="stylesheet" href="./styles/techrent.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <h1>TechRent Brasil</h1>
+            <nav>
+                <a href="pagefuncionario.html" class="ativo">Início</a>
+                <a href="gerenciar-reservas-funcionario.html">Reservas</a>
+                <a href="conta-funcionario.html">Conta</a>
+                <a href="#" onclick="sair()">Sair</a></nav>
+        </header>
+
+        <main class="container">
+            <section class="hero">
+                <div>
+                    <h2>Painel do Funcionário</h2>
+                    <p>Gerencie reservas, acompanhe solicitações de locação e monitore a disponibilidade dos equipamentos da TechRent Brasil.</p>
+                </div>
+            </section>
+
+            <section class="resumo-dashboard">
+                <div class="card-resumo"><h3>Pendentes</h3><span id="resumo-pendentes">0</span></div>
+                <div class="card-resumo"><h3>Aprovadas</h3><span id="resumo-aprovadas">0</span></div>
+                <div class="card-resumo"><h3>Retiradas</h3><span id="resumo-retiradas">0</span></div>
+                <div class="card-resumo"><h3>Devolvidas</h3><span id="resumo-devolvidas">0</span></div>
+            </section>
+
+            <section class="secao">
+                <h2>Reservas</h2>
+                <div class="cards-tecnicos" id="lista-reservas-admin"></div>
+            </section>
+        </main>
+
+        <div id="modal" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <h3>Atenção</h3>
+                <p id="mensagem-modal"></p>
+                <button onclick="fecharModal()">OK</button>
+            </div>
+        </div>
+        
+        <script>window.addEventListener("load",()=>document.body.classList.add("loaded"));</script>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechRent Brasil | Minha Conta</title>
+        <link rel="stylesheet" href="./styles/techrent.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <h1>TechRent Brasil</h1>
+            <nav>
+                <a href="pagecliente.html">Início</a>
+                <a href="minhas-reservas.html">Minhas Reservas</a>
+                <a href="minhaconta.html" class="ativo">Conta</a>
+                <a href="#" onclick="sair()">Sair</a>
+            </nav>
+        </header>
+        
+        <section class="minha-conta">
+            <h2>Minha Conta</h2>
+            <p>Consulte suas informações cadastradas no sistema TechRent Brasil.</p>
+            <hr>
+            <div id="dados-conta">
+            </div>
+        </section>
+        
+        <script>window.addEventListener("load",()=>document.body.classList.add("loaded"));</script>
+        <script src="script.js"></script>
+</body>
+</html>
