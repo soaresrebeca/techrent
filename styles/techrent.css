@@ -197,3 +197,60 @@ footer h3{color:var(--text);margin-bottom:4px}
   .sobre{grid-template-columns:1fr;gap:32px}
   .stat{border-right:0;border-bottom:1px solid var(--line)}
 }
+
+/* ===== Responsivo para celular ===== */
+html,body{max-width:100%;overflow-x:clip}
+.cards-tecnicos,.cards{grid-template-columns:repeat(auto-fill,minmax(min(270px,100%),1fr))}
+.cards-tecnicos>*,.cards>*,.resumo-dashboard>*,.dashboard-admin>*{min-width:0}
+.card-tecnico p,.card-chamado p,.card-tecnico h3,.card-chamado h3,#dados-conta p,.mock-linha strong{overflow-wrap:anywhere}
+
+@media(hover:none){
+  .card-tecnico:hover,.card-chamado:hover,.card:hover{transform:none;box-shadow:none;border-color:var(--line)}
+}
+
+@media(max-width:640px){
+  /* menu: uma linha só, sem grudar no topo */
+  .navbar{position:static;height:auto;flex-direction:column;align-items:stretch;gap:4px;padding:12px 14px 8px}
+  .navbar nav{width:100%;margin:0;justify-content:center;overflow:visible;flex-wrap:wrap;gap:2px}
+  .navbar nav a{flex:1 0 auto;text-align:center;padding:12px 10px;font-size:.88rem;min-height:44px}
+
+  /* espaçamentos */
+  .container{width:calc(100% - 28px);margin:20px auto 40px}
+  .hero{padding:22px;gap:16px;border-radius:16px}
+  .hero button{width:100%}
+  .minha-conta{width:calc(100% - 28px);margin:20px auto;padding:22px}
+  .secao{margin-top:28px}
+  .section{width:calc(100% - 32px);padding:32px 0}
+
+  /* contadores em 2 colunas */
+  .resumo-dashboard,.dashboard-admin{grid-template-columns:1fr 1fr;gap:12px}
+  .card-resumo{padding:16px}
+  .card-resumo span{font-size:1.8rem}
+  .resumo-dashboard .card-resumo:last-child:nth-child(odd),
+  .dashboard-admin .card-resumo:last-child:nth-child(odd){grid-column:1/-1}
+
+  /* toque confortável e sem zoom automático do iOS */
+  button,.btn{min-height:44px}
+  input,select,textarea{font-size:16px;min-height:46px}
+  textarea{min-height:96px}
+
+  /* login e cadastro */
+  .link-cadastro,.container-login form>a{display:flex;align-items:center;justify-content:center;min-height:44px}
+  main.auth{padding:16px;min-height:100vh;min-height:100dvh}
+  .container-login{padding:26px 18px;border-radius:16px}
+
+  /* modais */
+  #modal,#modal-chamado{padding:12px}
+  .chamado-content{padding:20px 16px;max-height:94vh;max-height:94dvh}
+
+  /* landing */
+  .landing-hero{padding:48px 18px 40px}
+  .hero-buttons .btn{width:100%}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{padding:20px 10px;border-right:0;border-bottom:1px solid var(--line)}
+  .stat:nth-child(odd){border-right:1px solid var(--line)}
+  .stat:nth-last-child(-n+2){border-bottom:0}
+  .sobre-visual::before{inset:-10px}
+  .mock-linha{flex-wrap:wrap}
+  .cta{padding:28px 18px}
+}
